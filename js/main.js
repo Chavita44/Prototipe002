@@ -4,7 +4,7 @@
   const ENDPOINT = 'https://formsubmit.co/ajax/' + E1;
   const page = document.body.dataset.page;
   // DATOS LEGALES: completa estos campos antes de publicar. Se rellenan solos en todas las políticas.
-  const LEGAL = { nombre: '', domicilio: '', ciudad: '' };
+  const LEGAL = { nombre: 'Salvador Garcia Gomez', domicilio: 'Av. Gigantes #134', ciudad: 'Guadalajara' };
   document.querySelectorAll('[data-k]').forEach(n => { const v = LEGAL[n.dataset.k]; if (v) { n.textContent = v; n.classList.remove('fill'); } });
   const nav = [['home', 'home', 'inicio'], ['videojuegos', 'videojuegos', 'videojuegos'], ['paginasweb', 'paginasweb', 'páginas web']];
   const links = nav.map(([k, h, t]) => `<a href="../${h}/"${k === page ? ' aria-current="page"' : ''}>[ ${t} ]</a>`).join('');
